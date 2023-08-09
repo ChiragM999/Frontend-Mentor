@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.1s ease-in-out;
+}
+
+body {
+	background-color: hsl(0, 0%, 95%);
+	font-family: 'Lexend Deca', sans-serif;
+}
+
+.section-card {
+	margin: 4rem 1rem;
+	display: flex;
+	flex-direction: column;
+
+	border-radius: 8px;
+	overflow: hidden;
+}
+.card {
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	justify-content: start;
+
+	background-color: var(--primary);
+}
+.card img {
+	width: 4rem;
+}
+.card h2 {
+	font-family: 'Big Shoulders Display', cursive;
+	font-weight: 700;
+	font-size: 2rem;
+	color: #fff;
+
+	text-transform: uppercase;
+}
+.card p {
+	line-height: 1.7;
+	color: hsla(0, 0%, 100%, 0.75);
+}
+.card button {
+	padding: 1rem 2rem;
+	border: 1px solid white;
+	margin-right: auto;
+	border-radius: 100px;
+
+	cursor: pointer;
+
+	color: var(--primary);
+}
+.card button:focus,
+.card button:hover {
+	background-color: var(--primary);
+	color: white;
+}
+
+.card:nth-child(1) {
+	--primary: hsl(31, 77%, 52%);
+}
+.card:nth-child(2) {
+	--primary: hsl(184, 100%, 22%);
+}
+.card:nth-child(3) {
+	--primary: hsl(179, 100%, 13%);
+}
+
+@media (min-width: 45em) {
+	.section-card {
+		flex-direction: row;
+		margin-inline: auto;
+		max-width: 60rem;
+	}
+}
