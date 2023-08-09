@@ -116,6 +116,9 @@ body {
 	.header-image {
 		content: url('images/image-header-desktop.jpg');
 	}
+	.overlay{
+		height: 100%;
+	}
 	.content {
 		grid-row: 1;
 		text-align: start;
