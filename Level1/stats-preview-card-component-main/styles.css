@@ -114,6 +114,7 @@ body {
 		grid-column: 2;
 	}
 	.header-image {
+		height: 100%;
 		content: url('images/image-header-desktop.jpg');
 	}
 	.overlay{
