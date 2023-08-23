@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+	--cyan: 179, 62%, 43%;
+	--bright-yellow: 71, 73%, 55%;
+	--white: 0, 0%, 100%;
+	--light-gray: 204, 43%, 93%;
+	--grayish-blue: 220, 22%, 67%;
+
+	--fw-light: 300;
+	--fw-bold: 700;
+
+	--fs-base: 1rem;
+	--fs-100: 0.75rem;
+	--fs-200: 0.875rem;
+	--fs-300: 0.9375rem;
+	--fs-400: 1.125rem;
+	--fs-500: 1.25rem;
+	--fs-600: 1.5rem;
+	--fs-700: 1.75rem;
+	--fs-800: 2rem;
+	--fs-900: 3.5rem;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font: inherit;
+}
+
+body {
+	font-family: 'Karla', sans-serif;
+	background-color: hsl(var(--light-gray));
+
+	display: grid;
+	place-items: center;
+
+	min-height: 100dvh;
+	overflow: scroll;
+}
+
+.grid {
+	display: grid;
+}
+
+.container {
+	margin: 4rem 1rem;
+	background-color: hsl(var(--white));
+}
+
+.container > * {
+	padding: 2rem;
+}
+
+.community-info {
+	display: flex;
+	flex-direction: column;
+	color: hsl(var(--grayish-blue));
+}
+.community-info > *,
+.price-table > *,
+.why-section > * {
+	margin-bottom: 0.6em;
+}
+
+h1 {
+	font-size: var(--fs-600);
+	color: hsl(var(--cyan));
+	font-weight: var(--fw-bold);
+}
+
+h2 {
+	font-size: var(--fs-500);
+	font-weight: var(--fw-bold);
+	color: hsl(var(--white));
+}
+
+.subheading {
+	font-size: var(--fs-400);
+	font-weight: var(--fw-bold);
+	color: hsl(var(--bright-yellow));
+}
+
+.community-info p {
+	line-height: 1.5;
+	font-size: var(--fs-300);
+}
+
+.price-table {
+	background-color: hsl(var(--cyan));
+	color: hsl(var(--light-gray));
+}
+.price {
+	color: hsl(var(--light-gray), 0.6);
+	font-weight: var(--fw-bold);
+}
+.price-table p {
+	color: hsl(var(--white));
+}
+button {
+	margin: 1rem 0;
+
+	padding: 1rem;
+	background-color: hsl(var(--bright-yellow));
+	border: none;
+	color: hsl(var(--white));
+	font-weight: var(--fw-bold);
+
+	box-shadow: 0 0.5rem 1rem 0.1rem hsl(0, 0%, 0%, 0.1);
+
+	cursor: pointer;
+
+	transition: all 300ms ease-in-out;
+}
+button:hover,
+button:focus {
+	background-color: hsl(71, 73%, 45%);
+}
+
+.price span {
+	font-size: var(--fs-800);
+	color: hsl(var(--white));
+}
+
+.why-section {
+	background-color: hsl(var(--cyan), 0.9);
+	color: hsl(var(--light-gray));
+}
+
+ul {
+	list-style: none;
+	display: grid;
+	gap: 0.3rem;
+}
+
+@media (min-width: 35em) {
+	.container {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto 1fr;
+	}
+	.community-info {
+		grid-column: 1 / -1;
+	}
+}

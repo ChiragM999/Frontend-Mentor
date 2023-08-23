@@ -43,6 +43,7 @@ body {
 
 	overflow: hidden;
 }
+
 .grid {
 	display: grid;
 	align-items: stretch;
